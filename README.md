@@ -8,12 +8,12 @@
     - Note: split data will split it 80% to train %20 validation
 
 - make sure to install the following: 
-    -pip install tensorflow
-    -pip install numpy
-    -pip install pillow
-    -pip install matplotlib
-    -pip install scikit-learn
-    -pip install tensorflow numpy pillow matplotlib scikit-learn
+  -pip install tensorflow
+  -pip install numpy
+  -pip install pillow
+  -pip install matplotlib
+  -pip install scikit-learn
+  -pip install tensorflow numpy pillow matplotlib scikit-learn
 ## Project Structure and Guide 
 - `main.py`: The primary for commands.
 - `model.py`: Contains model architectures and training logic.
