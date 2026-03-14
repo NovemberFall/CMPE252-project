@@ -7,8 +7,8 @@
 - Make sure to have folder called dataset->train 
     - Note: split data will split it 80% to train %20 validation
 
-- make sure to install the following: 
--pip install tensorflow
+- make sure to install the following:
+- -pip install tensorflow
 -pip install numpy
 -pip install pillow
 -pip install matplotlib
