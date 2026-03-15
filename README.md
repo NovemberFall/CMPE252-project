@@ -1,6 +1,6 @@
 # CMPE 252 FINAL PROJECT 
 # BREAST CANCER DETECTION 
-# Group members: Saja Alallao, Yuxiao Zheng<add>
+# Group members: Saja Alallao, Yuxiao Zheng, Lorelei English-Webster<add>
 
 # prerequisit:
 - Make sure to download the dataset from Kaggle
