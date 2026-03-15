@@ -6,7 +6,7 @@ from sklearn.datasets import load_breast_cancer
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import classification_report, accuracy_score
-from visual import plot_training_history
+from training_analysis import plot_training_history
 
 MODEL_PATH = Path("model.joblib")
 CNN_PATH = Path("best_busi_model.keras") 
@@ -110,9 +110,10 @@ def train_cnn(train_dir, val_dir, epochs=5, batch_size=32):
         epochs=epochs, 
         callbacks=[callback]
     )
+    
+    # Generate training analysis plots
+    plot_training_history(history.history)
 
-    # Call the visualization function
-    plot_training_history(history)
 
     model.save(CNN_PATH)
     print(f"CNN Model saved to {CNN_PATH}")
