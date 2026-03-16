@@ -28,3 +28,9 @@ python main.py setup-data
 
 # Train the image Model 
 python main.py train-cnn
+
+# run the experiments
+python3 experiments/run_experiments.py  
+
+
+
