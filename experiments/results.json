@@ -1,0 +1,14 @@
+[
+    {
+        "name": "baseline",
+        "epochs": 10
+    },
+    {
+        "name": "more_training",
+        "epochs": 20
+    },
+    {
+        "name": "less_training",
+        "epochs": 5
+    }
+]
