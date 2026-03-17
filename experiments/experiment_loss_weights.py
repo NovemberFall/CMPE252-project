@@ -2,11 +2,14 @@
 # It loads the dataset, builds the CNN model, trains with weighted loss,
 # and prints training progress for comparison with other experiments.
 import sys
-sys.path.append("..")
-from model import build_cnn
+from pathlib import Path
+
 import yaml
 import tensorflow as tf
-from pathlib import Path
+
+sys.path.append("..")
+from model import build_cnn
+from training_analysis import plot_training_history
 
 TRAIN_DIR = Path("dataset/train")
 VAL_DIR = Path("dataset/val")
@@ -56,12 +59,19 @@ def run_loss_weight_experiment():
     # }
 
     # Train the model using class weights to reduce class imbalance impact
-    model.fit(
+    history = model.fit(
         train_ds,
         validation_data=val_ds,
         epochs=epochs,
         class_weight=class_weights,
         verbose=2
+    )
+
+    output_dir = Path(__file__).resolve().parent / "accuracy_plot"
+    plot_training_history(
+        history.history,
+        save_dir=output_dir,
+        save_name="weighted_loss.png",
     )
 
 

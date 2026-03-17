@@ -34,7 +34,7 @@ num_classes = len(train_ds.class_names)
 model = build_cnn(num_classes=num_classes)
 
 # Train the model using class weights to address class imbalance
-model.fit(
+history = model.fit(
     train_ds,
     validation_data=val_ds,
     epochs=epochs,
